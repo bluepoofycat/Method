@@ -1,0 +1,74 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("What would you like the calculator to do?\r\nA) Add\r\nB) Subtract\r\nC) Multiply\r\nD) Divide");
+		var operand = Console.ReadLine();
+		switch(operand)
+    	{
+		case "a":
+		case "A":
+			Console.WriteLine("Please enter your first number:");
+			double x = Double.Parse(Console.ReadLine());
+			Console.WriteLine("Please enter your second number:");
+			double y = Double.Parse(Console.ReadLine());
+			double solutionAdd = Add(x, y);
+			Console.WriteLine(solutionAdd);
+			break;
+		case "b":
+		case "B":
+			Console.WriteLine("Please enter your first number:");
+			double s = Double.Parse(Console.ReadLine());
+			Console.WriteLine("Please enter your second number:");
+			double t = Double.Parse(Console.ReadLine());
+			double solutionSub = Subtract(s, t);
+			Console.WriteLine(solutionSub);
+			break;
+		case "c":
+		case "C":
+			Console.WriteLine("Please enter your first number:");
+			double i = Double.Parse(Console.ReadLine());
+			Console.WriteLine("Please enter your second number:");
+			double j = Double.Parse(Console.ReadLine());
+			double solutionMul = Multiply(i, j);
+			Console.WriteLine(solutionMul);
+			break;
+		case "d":
+		case "D":
+			Console.WriteLine("Please enter your first number:");
+			double q = Double.Parse(Console.ReadLine());
+			Console.WriteLine("Please enter your second number:");
+			double p = Double.Parse(Console.ReadLine());
+			double solutionDiv = Divide(q, p);
+			Console.WriteLine(solutionDiv);
+			break;
+		default:
+			Console.WriteLine("try again");
+			break;
+		}
+
+	}
+	
+	
+	public static double Add(double x, double y)
+	{
+		return x+y;
+	}
+	
+	public static double Subtract(double s, double t)
+	{
+		return s-t;
+	}
+	
+	public static double Multiply(double i, double j)
+	{
+		return i*j;
+	}
+	
+	public static double Divide(double q, double p)
+	{
+		return q/p;
+	}
+}
